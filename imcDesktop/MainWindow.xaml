@@ -5,8 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:imcDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Indice de Masa Corporal" Height="400" Width="300">
+    <StackPanel>
+        <Border Margin="8"
+         BorderThickness="1"       
+         BorderBrush="LightGray">
+            <StackPanel>
 
-    </Grid>
+
+                <Label Content="Peso en kilogramo:"/>
+                <TextBox x:Name="pesotextbox"/>
+                <Label Content="Estatura en metros"/>
+                <TextBox x:Name="Estaturatextbox" 
+                         Margin="4"/>
+
+                <StackPanel Orientation="Horizontal" Margin="8" HorizontalAlignment="Center">
+                    <Button x:Name="calculadoraButton"
+                            Content="Calcular"
+                            Margin="4"
+                            MinWidth="80"
+                            Click="calculadoraButton_Click"/>
+
+                    <Button x:Name="limpiarButton"
+                            Content ="Limpiar"
+                            Margin ="4"
+                            MinWidth ="80"
+                            Click="limpiarButton_Click"/>
+
+
+
+
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <GroupBox Header="Resultados"
+                  Margin="8"
+                  BorderBrush="LightGray"
+                  BorderThickness="1">
+            <StackPanel Margin="8">
+                <TextBlock Text="23.45"
+                           Margin="8"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           FontSize="20"
+                           x:Name="imcTextBlock"/>
+                <TextBlock Text="La situacion nutricional de la persona es:"/>
+                <TextBlock Text="peso normal"
+                           x:Name="situacionTextBlock"
+                           Margin="8"
+                           HorizontalAlignment="Center"
+                           FontSize="16"/>
+                
+
+
+
+            </StackPanel>
+            
+     
+        </GroupBox>
+        <Button x:Name="salirButton"
+                Content="Salir"
+                HorizontalAlignment="Center"
+                Margin="8"
+                MinWidth="100"
+                Click="salirButton_Click"/>
+        
+
+
+
+
+    </StackPanel>
 </Window>
